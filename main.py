@@ -23,7 +23,7 @@ web_data = response.text
 
 web_soup = BeautifulSoup(web_data, "html.parser")
 game_price_list = web_soup.find(name="div", class_="game_purchase_price price").get_text().strip().split()
-#game_price = int(game_price_list[0].split(",")[0]) - for Norway, will add as try except later
+#game_price = int(game_price_list[0].split(",")[0]) - for float, will add as try except later
 game_price = int(game_price_list[0])
 
 if game_price <= price_limit:
